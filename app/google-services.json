@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "794422035963",
+    "firebase_url": "https://lost-and-found-project-99acb-default-rtdb.firebaseio.com",
+    "project_id": "lost-and-found-project-99acb",
+    "storage_bucket": "lost-and-found-project-99acb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794422035963:android:4de68516897da5d20f775e",
+        "android_client_info": {
+          "package_name": "com.example.LostFound"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDGBTVkR1VuqWoJFBxDq0TpZouduk0zE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

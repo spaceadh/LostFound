@@ -1,0 +1,172 @@
+<!-- activity_message.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_gchannel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:id="@+id/groupLinear"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/sellerProfileImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_call_support" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sellerUsernameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Client's Username"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/baloo"
+                    android:textColor="#484b83"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp" />
+
+                <TextView
+                    android:id="@+id/callMeasure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text for emergencies."
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/baloo"
+                    android:textColor="#484b83"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2196F3"
+        android:layout_below="@id/toolbar_gchannel"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_gchat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_gchannel"
+        android:layout_above="@+id/layout_gchat_chatbox"
+        android:paddingBottom="8dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_gchat_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/button_gchat_attach_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="3dp"
+            android:contentDescription="Attach Image"
+            android:padding="5dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:src="@drawable/image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/button_gchat_attach_image">
+            <EditText
+                android:id="@+id/edit_gchat_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:layout_toStartOf="@+id/button_gchat_send"
+                android:background="@drawable/circle_background"
+                android:hint="What`s happening?"
+                android:fontFamily="@font/alegreya"
+                android:inputType="text"
+                android:maxLines="6"
+                android:cursorVisible="true"
+                android:padding="5dp"
+                android:textColor="#484b83"
+                android:textColorHint="#F5FEFD" />
+
+            <ImageView
+                android:id="@+id/button_gchat_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:padding="5dp"
+                android:src="@drawable/send"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/typingIndicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_gchat_chatbox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/typingIndicatorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Typing..."
+            android:textColor="@android:color/darker_gray" />
+
+        <ProgressBar
+            android:id="@+id/typingIndicatorProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

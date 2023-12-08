@@ -1,0 +1,17 @@
+<!-- Replace with your desired layout for each item in the RecyclerView -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/productNameTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:fontFamily="@font/balthazar"
+    android:textSize="18sp"/>
+</LinearLayout>

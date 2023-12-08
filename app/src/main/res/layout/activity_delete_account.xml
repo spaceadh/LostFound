@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484b83">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="148dp"
+        android:layout_height="141dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="97dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/loader_image_description"
+        android:src="@drawable/output2" />
+
+    <!-- Confirmation layout -->
+    <LinearLayout
+        android:id="@+id/confirmationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="71dp"
+        android:gravity="center"        android:orientation="vertical">
+
+        <!-- Confirmation text -->
+
+        <TextView
+            android:id="@+id/confirmationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="To confirm type “DELETE “ in the box below"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/delete_confirmation"
+            android:layout_width="335dp"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_stroke_shape"
+            android:hint="DELETE"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="#F44336"
+            android:textColorHint="#000000"
+            android:layout_marginBottom="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Button container -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onLayoutClick">
+
+            <!-- Yes button -->
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="197dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="8dp"
+                android:text="DELETE ME, 😢."
+                android:textColor="#D8D24C"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

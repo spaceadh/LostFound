@@ -1,0 +1,362 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#484b83"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <RelativeLayout
+            android:id="@+id/hello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/AccountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <!-- Upgrade to Incognito TextView -->
+                    <RelativeLayout
+                        android:id="@+id/ChangePicRelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circleImageView"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="profile_image"
+                            android:elevation="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/output2" />
+
+                        <ImageView
+                            android:id="@+id/editUserProfile"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_toEndOf="@id/circleImageView"
+                            android:layout_marginStart="1dp"
+                            android:src="@drawable/ic_pen" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/linearLayoutChangePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/ChangePicRelative"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/UserProfileView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:elevation="4dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/baloo"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/UserNameLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/hello"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/UserProfileView2Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:elevation="2dp"
+                android:text="Username : "
+                android:fontFamily="@font/alegreya"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/UserProfileView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/UserProfileView2Welcome"
+                android:layout_marginStart="3dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/alegreya"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/editUserName"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_pen" />
+
+            <EditText
+                android:id="@+id/changeUsernameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/UserProfileView2"
+                android:layout_centerHorizontal="true"
+                android:hint="Change Username"
+                android:fontFamily="@font/balthazar"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/phoneNumberLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/UserNameLinear"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/PhoneNumberTextViewWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:elevation="2dp"
+                android:text="Phone Number : "
+                android:fontFamily="@font/alegreya"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/PhoneNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/PhoneNumberTextViewWelcome"
+                android:layout_marginStart="3dp"
+                android:elevation="4dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/alegreya"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/editPhoneNumberPen"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_pen" />
+
+            <EditText
+                android:id="@+id/PhoneNumberEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:inputType="phone"
+                android:layout_below="@id/PhoneNumberTextView"
+                android:layout_centerHorizontal="true"
+                android:hint="Change Phone Number eg. 254"
+                android:fontFamily="@font/alegreya"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/BioLinearView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/phoneNumberLinear"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/BioTextViewWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Bio : "
+                android:fontFamily="@font/alegreya"
+                android:layout_marginStart="10dp"
+                android:elevation="2dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/BioTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/BioTextViewWelcome"
+                android:layout_marginStart="3dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/alegreya"
+                android:textStyle="bold"
+                android:textColor="@color/lavender"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/editBioPen"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_pen" />
+
+            <EditText
+                android:id="@+id/BioEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alegreya"
+                android:layout_below="@id/BioTextView"
+                android:layout_centerHorizontal="true"
+                android:hint="Change Bio, Kindly, no less than 20 characters"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/LabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:layout_below="@id/BioLinearView"
+            android:textAlignment="center"
+            android:fontFamily="@font/alegreya"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:text="All your details are completely safe \n Your phone number will only be used in case you forget your password"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2196F3"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/LabelTextView"/>
+        <RelativeLayout
+            android:id="@+id/logoutLinear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/alegreya"
+            android:layout_below="@id/LabelTextView"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:onClick="openLogoutActivity">
+
+            <!-- Log out TextView -->
+            <TextView
+                android:id="@+id/logoutTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Log Out"
+                android:fontFamily="@font/baloo"
+                android:textColor="#D8D24C"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2196F3"
+            android:layout_below="@id/logoutLinear"/>
+
+        <!-- Log outNotice -->
+        <RelativeLayout
+            android:id="@+id/DeleteAccountLinear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/logoutLinear">
+
+            <!-- Log out TextView -->
+            <TextView
+                android:id="@+id/DeleteAccountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Delete Account"
+                android:textColor="#DC143C"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#702963"
+            android:layout_below="@id/DeleteAccountLinear"/>
+
+        <RelativeLayout
+            android:id="@+id/LogoNameLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DeleteAccountLinear"
+            android:layout_marginTop="60dp">
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/output2" />
+
+            <TextView
+                android:id="@+id/LogoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/logoImageView"
+                android:fontFamily="@font/baloo"
+                android:text="Revolutionalizing Payments, With cheaper transaction charges"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="2dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

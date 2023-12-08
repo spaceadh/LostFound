@@ -1,0 +1,51 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484b83">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel" /> <!-- Replace @drawable/no_transactions_image with the image you want to display -->
+
+    <TextView
+        android:id="@+id/fiftyToaG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/alegreya"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/lavender"
+        android:text="Instructions for using the application : "
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/AgToSeventy"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lavender"
+        android:fontFamily="@font/alegreya"
+        android:layout_below="@id/fiftyToaG"
+        android:text="In the search tab in the home page, In title case type in the product name. If present, tap the product and proceed to contact the admin to prove that the lost product is yours. You can send a picture to prove the case. "
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/Disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lavender"
+        android:fontFamily="@font/alegreya"
+        android:layout_below="@id/AgToSeventy"
+        android:text="Once authenticated, you can visit the school security office to collect. And the product will be marked as collected."
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

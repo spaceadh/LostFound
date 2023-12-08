@@ -1,0 +1,78 @@
+<!-- activity_adding_wallpapers.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/lavender">
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your LostProduct`s Name"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/balthazar"
+        android:textColorHint="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp" />
+    <EditText
+        android:id="@+id/DescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your LostProduct`s Description"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/balthazar"
+        android:layout_below="@id/titleEditText"
+        android:textColorHint="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp" />
+    <EditText
+        android:id="@+id/ProductColorEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Color"
+        android:fontFamily="@font/balthazar"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/DescriptionEditText"
+        android:textColorHint="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/usabilityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Main Use"
+        android:fontFamily="@font/balthazar"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/ProductColorEditText"
+        android:textColorHint="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/finderEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Person who found it name"
+        android:fontFamily="@font/balthazar"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/usabilityEditText"
+        android:textColorHint="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/finderEditText"
+        android:text="Upload LostProduct" />
+
+</RelativeLayout>
